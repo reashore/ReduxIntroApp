@@ -19,9 +19,9 @@ class Counter extends Component {
         <h2>Redux Counter App</h2>
 
         <div>
-          <button onClick={this.decrementCounter}>-</button>
-          <span>{this.props.count}</span>
-          <button onClick={this.incrementCounter}>+</button>
+          <button onClick={this.decrementCounter}>Decrement</button>
+          <span>{`    ${this.props.count}    `}</span>
+          <button onClick={this.incrementCounter}>Increment</button>
         </div>
       </div>
     )
