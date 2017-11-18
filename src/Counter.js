@@ -1,23 +1,24 @@
-import React from 'react';
+
+import React, {Component} from 'react';
 import { connect } from 'react-redux';
 
-class Counter extends React.Component {
-  increment = () => {
+class Counter extends Component {
+  incrementCounter = () => {
     this.props.dispatch({ type: 'INCREMENT' });
   }
 
-  decrement = () => {
+  decrementCounter = () => {
     this.props.dispatch({ type: 'DECREMENT' });
   }
 
   render() {
     return (
       <div>
-        <h2>Counter</h2>
+        <h2>Redux Counter App</h2>
         <div>
-          <button onClick={this.decrement}>-</button>
+          <button onClick={this.decrementCounter}>-</button>
           <span>{this.props.count}</span>
-          <button onClick={this.increment}>+</button>
+          <button onClick={this.incrementCounter}>+</button>
         </div>
       </div>
     )
