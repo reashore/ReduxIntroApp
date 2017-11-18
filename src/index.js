@@ -4,6 +4,7 @@ import { render } from 'react-dom';
 import Counter from './Counter';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
+import constants from './constants';
 
 const initialState = {
   count: 0
@@ -11,12 +12,12 @@ const initialState = {
 
 function reducer(state = initialState, action) {
   switch (action.type) {
-    case 'INCREMENT':
+    case constants.INCREMENT_COUNTER:
       return {
         count: state.count + 1
       };
 
-    case 'DECREMENT':
+    case constants.DECREMENT_COUNTER:
       return {
         count: state.count - 1
       };

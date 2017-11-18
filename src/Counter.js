@@ -1,15 +1,16 @@
 
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
+import constants from './constants';
 
 class Counter extends Component {
   incrementCounter = () => {
-    const incrementAction = { type: 'INCREMENT' }
+    const incrementAction = { type: constants.INCREMENT_COUNTER }
     this.props.dispatch(incrementAction);
   }
 
   decrementCounter = () => {
-    const decrementAction = { type: 'DECREMENT' };
+    const decrementAction = { type: constants.DECREMENT_COUNTER };
     this.props.dispatch(decrementAction);
   }
 
