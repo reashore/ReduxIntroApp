@@ -4,17 +4,20 @@ import { connect } from 'react-redux';
 
 class Counter extends Component {
   incrementCounter = () => {
-    this.props.dispatch({ type: 'INCREMENT' });
+    const incrementAction = { type: 'INCREMENT' }
+    this.props.dispatch(incrementAction);
   }
 
   decrementCounter = () => {
-    this.props.dispatch({ type: 'DECREMENT' });
+    const decrementAction = { type: 'DECREMENT' };
+    this.props.dispatch(decrementAction);
   }
 
   render() {
     return (
       <div>
         <h2>Redux Counter App</h2>
+
         <div>
           <button onClick={this.decrementCounter}>-</button>
           <span>{this.props.count}</span>
